@@ -27,7 +27,7 @@ def main():
     # Funcion Lambda y'=f'(x) a utilizar en el metodo
     fp = lambda x : -math.exp(-x) - 1
 
-    # Encabezados
+    # Encabezado del método
     print("Método de Newton Raphson")
     print("------------------------")
 

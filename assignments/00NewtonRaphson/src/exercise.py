@@ -8,7 +8,7 @@ def newton_raphson(f, fp, x, error):
     # error-> Criterio de parada: cuando el valor absoluto de dos aproximaciones consecutivas sea menor que este valor el algoritmo para
 
     # Valores de salida:
-    # raiz, aproximaciones, número de iteraciones
+    # raiz (r), aproximaciones (lista de aproximaciones), número de iteraciones (i)
 
     erroractual = math.inf
     i = 0

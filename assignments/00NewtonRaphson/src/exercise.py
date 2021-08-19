@@ -10,36 +10,30 @@ def newton_raphson(f, fp, x, error):
     # Valores de salida:
     # raiz (r), aproximaciones (lista de aproximaciones), número de iteraciones (i)
 
-    erroractual = math.inf
-    i = 0
-    while erroractual > error:
-        x = x + [x[i]-f(x[i])/fp(x[i])]
-        erroractual = math.fabs(x[i+1]-x[i])
-        i=i+1
-    return x[i], x, i
+    
+    return raiz, x, i
 
 def main():
-    #escribe tu código abajo de esta línea
+    #escribe tu código abajo
 
     # Funcion Lambda y=f(x) a aplicar el metodo
-    f = lambda x : math.exp(-x) - x
+    # f = ...
 
     # Funcion Lambda y'=f'(x) a utilizar en el metodo
-    fp = lambda x : -math.exp(-x) - 1
+    # fp = ...
 
     # Encabezado del método
     print("Método de Newton Raphson")
     print("------------------------")
 
-    # Aproximacion inicial
-    x=[0]
-    x[0] = float(input("Dame el valor inicial:"))
-    error = float(input("Dame el error:"))
-
+    # Solicito datos de entrada (aproximacion inicial y error)
+    # ...
+    
+    # Aplico el metodo de Newton Raphson para encontrar la raiz
     raiz,x,iteraciones = newton_raphson(f, fp, x, error)
 
-    print(f"La raíz de la función y=f(x) es {raiz:6.4f} calculada en {iteraciones} iteraciones con Newton-Raphson")
-    print(f"Las aproximaciones fueron: {x}")
+    # Muestro resultados
+    # ...
 
 if __name__=='__main__':
     main()
